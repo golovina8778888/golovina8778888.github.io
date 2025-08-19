@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://golovina8778888.github.io/sitemap.xml
