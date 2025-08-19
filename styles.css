@@ -45,11 +45,11 @@ header {
 
 .logo-icon {
   font-size: 1.8rem;
-  color: #4A148C;
+  color: #5A189A;
 }
 
 .logo h1 span {
-  color: #4A148C;
+  color: #5A189A;
 }
 
 nav ul {
@@ -66,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #4A148C;
+  color: #5A189A;
 }
 
 /* Hero Section */
@@ -89,7 +89,9 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  /* Subtle gradient overlay with brand colour */
+  /* Soft gradient using the new brand colour */
+  background: linear-gradient(to bottom, rgba(40,0,80,0.5), rgba(90,24,154,0.6));
   z-index: 1;
 }
 
@@ -113,7 +115,7 @@ nav a:hover {
 }
 
 .btn-primary {
-  background-color: #4A148C;
+  background-color: #5A189A;
   color: #fff;
   padding: 0.8rem 1.8rem;
   border-radius: 30px;
@@ -123,7 +125,7 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-  background-color: #6a1b9a;
+  background-color: #6e2bbf;
 }
 
 /* Partners Section */
@@ -136,7 +138,7 @@ nav a:hover {
 .partners-section h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #4A148C;
+  color: #5A189A;
 }
 
 .section-subtitle {
@@ -154,8 +156,8 @@ nav a:hover {
 
 .partner-logo {
   font-size: 2rem;
-  color: #4A148C;
-  background-color: #f1e7f7;
+  color: #5A189A;
+  background-color: #f3eafc;
   width: 70px;
   height: 70px;
   display: flex;
@@ -173,7 +175,7 @@ nav a:hover {
 
 .hits-section h2 {
   font-size: 2rem;
-  color: #4A148C;
+  color: #5A189A;
   margin-bottom: 2rem;
 }
 
@@ -232,7 +234,7 @@ nav a:hover {
 
 .why-section h2 {
   font-size: 2rem;
-  color: #4A148C;
+  color: #5A189A;
   margin-bottom: 0.5rem;
 }
 
@@ -253,7 +255,7 @@ nav a:hover {
 
 .why-icon {
   font-size: 2rem;
-  color: #4A148C;
+  color: #5A189A;
   margin-bottom: 1rem;
 }
 
@@ -277,7 +279,7 @@ nav a:hover {
 
 .results-section h2 {
   font-size: 2rem;
-  color: #4A148C;
+  color: #5A189A;
   margin-bottom: 0.5rem;
 }
 
@@ -298,7 +300,7 @@ nav a:hover {
 
 .metric-icon {
   font-size: 2rem;
-  color: #4A148C;
+  color: #5A189A;
   margin-bottom: 0.5rem;
 }
 
@@ -331,7 +333,7 @@ nav a:hover {
 .analytic-value {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #4A148C;
+  color: #5A189A;
   display: block;
   margin-bottom: 0.2rem;
 }
@@ -350,7 +352,7 @@ nav a:hover {
 
 .contact-section h2 {
   font-size: 2rem;
-  color: #4A148C;
+  color: #5A189A;
   margin-bottom: 0.5rem;
 }
 
@@ -363,8 +365,8 @@ nav a:hover {
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #4A148C;
-  color: #4A148C;
+  border: 2px solid #5A189A;
+  color: #5A189A;
   padding: 0.7rem 1.8rem;
   border-radius: 30px;
   text-decoration: none;
@@ -375,7 +377,7 @@ nav a:hover {
 }
 
 .btn-secondary:hover {
-  background-color: #4A148C;
+  background-color: #5A189A;
   color: #fff;
 }
 
@@ -434,7 +436,7 @@ nav a:hover {
   padding: 0.8rem;
   border-radius: 30px;
   border: none;
-  background-color: #4A148C;
+  background-color: #5A189A;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -443,12 +445,12 @@ nav a:hover {
 }
 
 .subscribe-form button:hover {
-  background-color: #6a1b9a;
+  background-color: #6e2bbf;
 }
 
 /* Footer */
 footer {
-  background-color: #4A148C;
+  background-color: #5A189A;
   color: #fff;
   padding: 2rem 0;
   margin-top: 4rem;
