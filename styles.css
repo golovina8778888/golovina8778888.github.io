@@ -51,11 +51,11 @@ header {
 
 .logo-icon {
   font-size: 1.8rem;
-  color: #5A189A;
+  color: #2962FF;
 }
 
 .logo h1 span {
-  color: #5A189A;
+  color: #2962FF;
 }
 
 nav ul {
@@ -72,13 +72,15 @@ nav a {
 }
 
 nav a:hover {
-  color: #5A189A;
+  color: #2962FF;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  background-image: url('hero.png');
+  /* Use a deep blue radial gradient instead of a photographic image */
+  /* Updated radial gradient for a brighter, more refined blue tone */
+  background-image: radial-gradient(circle at 30% 30%, #183d69, #081c35);
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -102,6 +104,30 @@ nav a:hover {
   z-index: 1;
 }
 
+/* Subtle horizontal stripes overlay on top of the gradient */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Transform the overlay into horizontal bands reminiscent of
+     abstract geometric panels. The repeating-linear-gradient
+     creates stripes of varying opacity running horizontally
+     across the hero section. */
+  background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0px,
+      rgba(255, 255, 255, 0.15) 3px,
+      rgba(255, 255, 255, 0) 3px,
+      rgba(255, 255, 255, 0) 40px
+    );
+  mix-blend-mode: overlay;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -110,14 +136,71 @@ nav a:hover {
   height: 100%;
   /* Subtle gradient overlay with brand colour */
   /* Soft gradient using the new brand colour */
-  background: linear-gradient(to bottom, rgba(40,0,80,0.5), rgba(90,24,154,0.6));
+  /* Dark overlay for better contrast on the blue gradient */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(5,20,40,0.6)); /* unchanged */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  /* Layer above decorative bars and overlays */
+  z-index: 3;
   max-width: 800px;
+}
+
+/* Decorative horizontal bars within the hero section
+   These subtle panels create a modern geometric vibe akin to
+   abstract digital artwork. They sit above the dark overlay but
+   beneath the text content to avoid obscuring readability. */
+.decorative-bars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.decorative-bars .bar {
+  position: absolute;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+  mix-blend-mode: overlay;
+}
+
+/* Individual bar configurations – adjust widths, positions
+   and opacities to create variation and depth */
+.decorative-bars .bar1 {
+  width: 60%;
+  height: 6px;
+  top: 25%;
+  left: 20%;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.decorative-bars .bar2 {
+  width: 45%;
+  height: 4px;
+  top: 40%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.decorative-bars .bar3 {
+  width: 75%;
+  height: 8px;
+  top: 55%;
+  left: 15%;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.decorative-bars .bar4 {
+  width: 30%;
+  height: 6px;
+  top: 70%;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 .hero-content h2 {
@@ -137,7 +220,7 @@ nav a:hover {
 }
 
 .btn-primary {
-  background-color: #5A189A;
+  background-color: #2962FF;
   color: #fff;
   padding: 0.8rem 1.8rem;
   border-radius: 30px;
@@ -147,7 +230,7 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-  background-color: #6e2bbf;
+  background-color: #0039CB;
 }
 
 /* Partners Section */
@@ -160,7 +243,7 @@ nav a:hover {
 .partners-section h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #5A189A;
+  color: #2962FF;
 }
 
 .section-subtitle {
@@ -178,8 +261,8 @@ nav a:hover {
 
 .partner-logo {
   font-size: 2rem;
-  color: #5A189A;
-  background-color: #f3eafc;
+  color: #2962FF;
+  background-color: #e8f0ff;
   width: 70px;
   height: 70px;
   display: flex;
@@ -204,7 +287,7 @@ nav a:hover {
 
 .hits-section h2 {
   font-size: 2rem;
-  color: #5A189A;
+  color: #2962FF;
   margin-bottom: 2rem;
 }
 
@@ -263,7 +346,7 @@ nav a:hover {
 
 .why-section h2 {
   font-size: 2rem;
-  color: #5A189A;
+  color: #2962FF;
   margin-bottom: 0.5rem;
 }
 
@@ -285,7 +368,7 @@ nav a:hover {
 
 .why-icon {
   font-size: 2rem;
-  color: #5A189A;
+  color: #2962FF;
   margin-bottom: 1rem;
 }
 
@@ -315,7 +398,7 @@ nav a:hover {
 
 .results-section h2 {
   font-size: 2rem;
-  color: #5A189A;
+  color: #2962FF;
   margin-bottom: 0.5rem;
 }
 
@@ -337,7 +420,7 @@ nav a:hover {
 
 .metric-icon {
   font-size: 2rem;
-  color: #5A189A;
+  color: #2962FF;
   margin-bottom: 0.5rem;
 }
 
@@ -377,7 +460,7 @@ nav a:hover {
 .analytic-value {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #5A189A;
+  color: #2962FF;
   display: block;
   margin-bottom: 0.2rem;
 }
@@ -402,7 +485,8 @@ nav a:hover {
 
 .contact-section h2 {
   font-size: 2rem;
-  color: #5A189A;
+  /* Use the primary accent colour for consistency across the site */
+  color: #2962FF;
   margin-bottom: 0.5rem;
 }
 
@@ -415,8 +499,8 @@ nav a:hover {
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #5A189A;
-  color: #5A189A;
+  border: 2px solid #2962FF;
+  color: #2962FF;
   padding: 0.7rem 1.8rem;
   border-radius: 30px;
   text-decoration: none;
@@ -427,7 +511,7 @@ nav a:hover {
 }
 
 .btn-secondary:hover {
-  background-color: #5A189A;
+  background-color: #2962FF;
   color: #fff;
 }
 
@@ -486,7 +570,7 @@ nav a:hover {
   padding: 0.8rem;
   border-radius: 30px;
   border: none;
-  background-color: #5A189A;
+  background-color: #2962FF;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -495,12 +579,12 @@ nav a:hover {
 }
 
 .subscribe-form button:hover {
-  background-color: #6e2bbf;
+  background-color: #0039CB;
 }
 
 /* Footer */
 footer {
-  background-color: #5A189A;
+  background-color: #2962FF;
   color: #fff;
   padding: 2rem 0;
   margin-top: 4rem;
