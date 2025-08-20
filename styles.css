@@ -13,7 +13,8 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #2e2e2e;
-  background-color: #f8f8f8;
+  /* Apply a warm off‑white brown tone across the site for a more luxurious feel */
+  background-color: #f5ede6;
 }
 
 /* Use Montserrat for headings for a more refined look */
@@ -30,7 +31,7 @@ h1, h2, h3, h4 {
 
 /* Header */
 header {
-  background-color: #ffffff;
+  background-color: #f9f1eb;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -79,8 +80,8 @@ nav a:hover {
 .hero {
   position: relative;
   /* Use a deep blue radial gradient instead of a photographic image */
-  /* Updated radial gradient for a brighter, more refined blue tone */
-  background-image: radial-gradient(circle at 30% 30%, #183d69, #081c35);
+  /* Revert to the deep blue radial gradient used previously */
+  background-image: radial-gradient(circle at 30% 30%, #0a2a54, #010c1e);
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -112,17 +113,14 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Transform the overlay into horizontal bands reminiscent of
-     abstract geometric panels. The repeating-linear-gradient
-     creates stripes of varying opacity running horizontally
-     across the hero section. */
-  background: repeating-linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.15) 0px,
-      rgba(255, 255, 255, 0.15) 3px,
-      rgba(255, 255, 255, 0) 3px,
-      rgba(255, 255, 255, 0) 40px
+  /* Maintain subtle horizontal stripes for texture */
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.15) 100%
     );
+  background-size: 100% 6px;
+  background-repeat: repeat-y;
   mix-blend-mode: overlay;
   z-index: 0;
   pointer-events: none;
@@ -143,8 +141,7 @@ nav a:hover {
 
 .hero-content {
   position: relative;
-  /* Layer above decorative bars and overlays */
-  z-index: 3;
+  z-index: 2;
   max-width: 800px;
 }
 
@@ -152,56 +149,6 @@ nav a:hover {
    These subtle panels create a modern geometric vibe akin to
    abstract digital artwork. They sit above the dark overlay but
    beneath the text content to avoid obscuring readability. */
-.decorative-bars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.decorative-bars .bar {
-  position: absolute;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.15);
-  mix-blend-mode: overlay;
-}
-
-/* Individual bar configurations – adjust widths, positions
-   and opacities to create variation and depth */
-.decorative-bars .bar1 {
-  width: 60%;
-  height: 6px;
-  top: 25%;
-  left: 20%;
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-.decorative-bars .bar2 {
-  width: 45%;
-  height: 4px;
-  top: 40%;
-  left: 5%;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.decorative-bars .bar3 {
-  width: 75%;
-  height: 8px;
-  top: 55%;
-  left: 15%;
-  background-color: rgba(255, 255, 255, 0.08);
-}
-
-.decorative-bars .bar4 {
-  width: 30%;
-  height: 6px;
-  top: 70%;
-  left: 50%;
-  background-color: rgba(255, 255, 255, 0.18);
-}
 
 .hero-content h2 {
   font-size: 3rem;
@@ -237,7 +184,7 @@ nav a:hover {
 .partners-section {
   padding: 4rem 0;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #f9f1eb;
 }
 
 .partners-section h2 {
@@ -281,7 +228,7 @@ nav a:hover {
 /* Hits Section */
 .hits-section {
   padding: 4rem 0;
-  background-color: #f9f6fd;
+  background-color: #f2e8df;
   text-align: center;
 }
 
@@ -340,7 +287,7 @@ nav a:hover {
 /* Why choose section */
 .why-section {
   padding: 4rem 0;
-  background-color: #fdfbff;
+  background-color: #f4ebe4;
   text-align: center;
 }
 
@@ -358,7 +305,7 @@ nav a:hover {
 }
 
 .why-item {
-  background-color: #f8f8f8;
+  background-color: #f8f1e9;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -392,7 +339,7 @@ nav a:hover {
 /* Results Section */
 .results-section {
   padding: 4rem 0;
-  background-color: #f8f8f8;
+  background-color: #f3eae2;
   text-align: center;
 }
 
@@ -410,7 +357,7 @@ nav a:hover {
 }
 
 .metric {
-  background-color: #ffffff;
+  background-color: #f9f1e8;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -449,7 +396,7 @@ nav a:hover {
 }
 
 .analytic {
-  background-color: #ffffff;
+  background-color: #f9f1e8;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -479,7 +426,7 @@ nav a:hover {
 /* Contact Section */
 .contact-section {
   padding: 4rem 0;
-  background-color: #ffffff;
+  background-color: #f8f0e7;
   text-align: center;
 }
 
@@ -524,7 +471,7 @@ nav a:hover {
 }
 
 .contact-details, .subscribe-form {
-  background-color: #f8f8f8;
+  background-color: #f1e8e0;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
