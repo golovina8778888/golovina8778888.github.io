@@ -1,22 +1,23 @@
 /*
-  FliPlay Stylesheet
+  PliPly Stylesheet
 
-  This stylesheet defines a modern, dark‑themed aesthetic inspired by
-  contemporary tech websites. It uses CSS custom properties for
-  colours and ensures consistent spacing and alignment. Cards, buttons
-  and grid layouts are used throughout to create a clean and
-  professional look.
+  This stylesheet defines a modern aesthetic with a dark base and
+  vibrant accent colours, taking inspiration from contemporary tech
+  websites. CSS custom properties drive the colour palette and ensure
+  consistent spacing and alignment. Cards, buttons and grid layouts
+  are used throughout to create a clean and professional look.
 */
 
 /* CSS Variables for colours */
 :root {
-  --bg-dark: #0f0c29;
-  --bg-medium: #302b63;
-  --bg-light: #42378f;
-  --accent: #00bfa6;
-  --accent-dark: #008f7a;
-  --text-light: #f5f5f5;
-  --text-muted: #d4d4e0;
+  /* Updated colour palette inspired by the provided design */
+  --bg-dark: #2C3531;        /* deep charcoal green */
+  --bg-medium: #116466;      /* rich teal used for section backgrounds */
+  --bg-light: #D1E8E2;       /* pale mint for highlights */
+  --accent: #FFCB9A;         /* soft peach accent for buttons and icons */
+  --accent-dark: #D9B08C;    /* warm tan for hover states */
+  --text-light: #F5F5F5;     /* off‑white for primary text */
+  --text-muted: #D1E8E2;     /* subtle mint for secondary text */
 }
 
 /* Reset and global styles */
@@ -53,7 +54,8 @@ h1, h2, h3, h4 {
 
 /* Header */
 header {
-  background-color: rgba(15, 12, 41, 0.85);
+  /* Use a translucent version of the dark base colour for the header */
+  background-color: rgba(44, 53, 49, 0.85);
   backdrop-filter: blur(6px);
   position: fixed;
   width: 100%;
