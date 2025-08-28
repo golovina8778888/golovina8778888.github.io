@@ -130,7 +130,7 @@ a:hover{text-decoration:underline}
 
 /* Additional styles for animated logo and brand text */
 .logo {
-  height: 32px;
+  heigh0 32px;
   margin-right: 10px;
   animation: pulse 3s infinite;
 }
@@ -154,3 +154,17 @@ a:hover{text-decoration:underline}
   font-size: 1.2em;
   font-weight: 700;
 }
+
+/* Updated logo and brand sizes for better visibility */
+.logo {
+  height: 40px !important;
+}
+.brand-text {
+  font-size: 1.5em !important;
+}
+.badge {
+  width: 40px !important;
+  height: 40px !important;
+  animation: pulse 2s ease-in-out infinite;
+}
+
