@@ -189,6 +189,23 @@
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             nav { padding: 20px; }
             .hud-frame { display: none; }
+
+            /* Adjust the capabilities heading on small screens to prevent overflow */
+            h2[data-i18n="capabilities"] {
+                font-size: 2.5rem;
+                -webkit-text-stroke: 0.5px #fff;
+                /* Allow long words (e.g. "Capabilities") to wrap on smaller screens */
+                word-break: break-word;
+            }
+        }
+
+        /* Further reduce heading size for very narrow screens (phones under 480px) */
+        @media (max-width: 480px) {
+            h2[data-i18n="capabilities"] {
+                font-size: 2rem;
+                -webkit-text-stroke: 0.4px #fff;
+                word-break: break-word;
+            }
         }
     </style>
 </head>
