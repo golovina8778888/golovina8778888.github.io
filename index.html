@@ -191,21 +191,24 @@
             .hud-frame { display: none; }
 
             /* Adjust the capabilities heading on small screens to prevent overflow */
-            h2[data-i18n="capabilities"] {
-                font-size: 2.5rem;
-                -webkit-text-stroke: 0.5px #fff;
-                /* Allow long words (e.g. "Capabilities") to wrap on smaller screens */
-                word-break: break-word;
+                h2[data-i18n="capabilities"] {
+                /* Reduce heading size further on medium mobile screens to prevent awkward line breaks */
+                font-size: 1.8rem;
+                -webkit-text-stroke: 0.4px #fff;
             }
-        }
+
 
         /* Further reduce heading size for very narrow screens (phones under 480px) */
         @media (max-width: 480px) {
-            h2[data-i18n="capabilities"] {
-                font-size: 2rem;
-                -webkit-text-stroke: 0.4px #fff;
-                word-break: break-word;
-            }
+        @media (max-width: 480px) {
+    h2[data-i18n="capabilities"] {
+        font-size: 1.4rem;
+                -webkit-text-stroke: 0.3px #fff;
+
+    
+    }
+}
+
         }
     </style>
 </head>
