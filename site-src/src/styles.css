@@ -144,7 +144,7 @@ p {
 .hero {
   position: relative;
   isolation: isolate;
-  height: min(70.4vw, 1014px);
+  height: min(62vw, 900px);
   min-height: 620px;
   background: #08090a;
 }
@@ -158,7 +158,7 @@ p {
   object-position: center;
 }
 .hero-content {
-  padding-top: clamp(155px, 17.2vw, 248px);
+  padding-top: clamp(112px, 9vw, 130px);
 }
 .hero h1 {
   font-size: clamp(58px, 7.15vw, 103px);
@@ -680,10 +680,10 @@ html:has(.contact-dialog[open]) {
 }
 @media (max-width: 900px) and (min-width: 701px) {
   .hero {
-    min-height: 660px;
+    min-height: 600px;
   }
   .hero-content {
-    padding-top: 155px;
+    padding-top: 120px;
   }
   .hero h1 {
     font-size: 7.15vw;
