@@ -1,0 +1,16 @@
+✔ unconfigured or unexpected endpoint never sends (1.342915ms)
+✔ JSON acknowledgement, not HTTP 200 alone, determines acceptance (0.760346ms)
+✔ rate limits, validation, service failure and network uncertainty stay distinct (0.51711ms)
+✔ timeout aborts and never automatically retries (6.354301ms)
+✔ invalid or oversized input cannot reach the network (0.352211ms)
+✔ only approved fields leave the page, without cookies, referrer or redirects (0.768369ms)
+✔ missing AbortController degrades to uncertainty without throwing or sending (0.86215ms)
+✔ mailto is only an encoded draft for the approved address (0.313883ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.823793

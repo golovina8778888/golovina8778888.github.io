@@ -1,0 +1,68 @@
+[
+  {
+    "mode": "no-three",
+    "contact": "mailto:adm@pliply.pro",
+    "focus": "contact-email",
+    "lang": "ru",
+    "logoAnimation": "logo-float",
+    "open": true,
+    "scene": "static",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "mode": "no-gsap",
+    "contact": "mailto:adm@pliply.pro",
+    "focus": "contact-email",
+    "lang": "ru",
+    "logoAnimation": "logo-float",
+    "open": true,
+    "scene": "static",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "mode": "no-cdn",
+    "contact": "mailto:adm@pliply.pro",
+    "focus": "contact-email",
+    "lang": "ru",
+    "logoAnimation": "logo-float",
+    "open": true,
+    "scene": "static",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "mode": "no-webgl",
+    "contact": "mailto:adm@pliply.pro",
+    "focus": "contact-email",
+    "lang": "ru",
+    "logoAnimation": "logo-float",
+    "open": true,
+    "scene": "static",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "mode": "storage-denied",
+    "contact": "mailto:adm@pliply.pro",
+    "focus": "contact-email",
+    "lang": "ru",
+    "logoAnimation": "logo-float",
+    "open": true,
+    "scene": "animated",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "mode": "reduced-motion",
+    "contact": "mailto:adm@pliply.pro",
+    "focus": "contact-email",
+    "lang": "ru",
+    "logoAnimation": "none",
+    "open": true,
+    "scene": "reduced-motion",
+    "scroll": 390,
+    "width": 390
+  }
+]

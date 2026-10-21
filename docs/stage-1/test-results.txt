@@ -1,0 +1,13 @@
+✔ unconfigured or unexpected endpoint never sends (0.721125ms)
+✔ JSON acknowledgement, not HTTP 200 alone, determines acceptance (0.465666ms)
+✔ rate limits, validation, service failure and network uncertainty stay distinct (0.299708ms)
+✔ timeout aborts and never automatically retries (5.279958ms)
+✔ mailto is only an encoded draft for the approved address (0.676917ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 69.84875

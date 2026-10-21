@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://golovina8778888.github.io/</loc>
-    <!-- The last modification date follows ISO 8601 format (YYYY-MM-DD) -->
-    <lastmod>2025-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://pliply.pro/</loc></url>
+  <url><loc>https://pliply.pro/process.html</loc></url>
+  <url><loc>https://pliply.pro/services.html</loc></url>
+  <url><loc>https://pliply.pro/contact.html</loc></url>
 </urlset>

@@ -1,0 +1,15 @@
+{
+  "pending": {
+    "busy": "true",
+    "disabled": true,
+    "readOnly": true
+  },
+  "reopened": {
+    "disabled": true,
+    "text": "Duplicate prevention test, local only."
+  },
+  "edited": {
+    "disabled": false,
+    "status": ""
+  }
+}

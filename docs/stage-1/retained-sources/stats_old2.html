@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stats — PliPly.Pro</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles for stats page */
+    .stats-section {
+      padding: 60px 20px;
+    }
+    .stats-section h2 {
+      text-align: center;
+      color: var(--ink);
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .dash-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .dash-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+      flex: 1 1 45%;
+      min-width: 280px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    .dash-card h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .dash-img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+    /* KPI summary block */
+    .kpi-summary {
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="logo.png" alt="PliPly.Pro logo" class="logo" />
+        <span class="brand-text">PliPly.Pro</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a><a href="process.html">Process</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="stats.html" class="active">Stats</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span>RETENTION</span><span>CTR</span><span>REVENUE</span><span>REACH</span><span>ANALYTICS</span><span>RETENTION</span><span>CTR</span><span>REVENUE</span><span>REACH</span><span>ANALYTICS</span>
+    </div>
+  </div>
+  <section class="section hero">
+    <div class="bigword">STATS</div>
+    <div class="kicker">Impact In Numbers</div>
+    <div class="h1">Signals That Matter</div>
+    <p class="sub">Live KPIs, consistent growth.</p>
+    <!-- Added KPI summary block using 9th screenshot -->
+    <div class="kpi-summary">
+      <div class="dash-card">
+        <img src="assets/Снимок экрана 2025-08-26 в 00.19.49.png" class="dash-img" alt="KPI summary chart">
+      </div>
+    </div>
+  </section>
+  <section class="stats-section">
+    <div class="container">
+      <h2>Key dashboards</h2>
+      <div class="dash-grid">
+        <!-- Replace first image with second screenshot and updated caption -->
+        <div class="dash-card">
+          <h3>Channel Analytics Overview (channel in Russian)</h3>
+          <img src="assets/Снимок экрана 2025-08-28 в 10.58.41.png" class="dash-img" alt="Channel analytics overview">
+        </div>
+        <div class="dash-card">
+          <h3>Views by content with revenue</h3>
+          <img src="views_content.jpg" class="dash-img" alt="Content views advanced with revenue data">
+        </div>
+      </div>
+      <h2>Evidence from YouTube Analytics</h2>
+      <div class="dash-grid">
+        <!-- Lifetime metrics card remains unchanged -->
+        <div class="dash-card">
+          <h3>Lifetime metrics: views &amp; watch time</h3>
+          <img src="lifetime_metrics.jpg" class="dash-img" alt="Lifetime metrics views &amp; watch time">
+        </div>
+        <!-- Replace lifetime revenue chart (Cinema First) with new image 4 and update caption -->
+        <div class="dash-card">
+          <h3>Revenue Chart for the Entire Period (channel in English)</h3>
+          <img src="assets/Снимок экрана 2025-08-28 в 11.10.59.png" class="dash-img" alt="Lifetime revenue chart">
+        </div>
+        <!-- Replace channel analytics overview last 28 days with new image 6 and update caption -->
+        <div class="dash-card">
+          <h3>Channel analytics overview – last 28 days (channel in Spanish)</h3>
+          <img src="assets/Снимок экрана 2025-08-28 в 11.13.13.png" class="dash-img" alt="Last 28 days analytics overview">
+        </div>
+        <!-- Metrics views & watch time last 28 days remains unchanged -->
+        <div class="dash-card">
+          <h3>Metrics: views &amp; watch time (last 28 days)</h3>
+          <img src="metrics_28days.jpg" class="dash-img" alt="Metrics views &amp; watch time 28 days">
+        </div>
+        <!-- Replace revenue chart last 28 days with new image 8 -->
+        <div class="dash-card">
+          <h3>Revenue chart (last 28 days)</h3>
+          <img src="assets/Снимок экрана 2025-08-28 в 11.16.52.png" class="dash-img" alt="Revenue chart 28 days">
+        </div>
+        <!-- Update caption for views by channel Cinema Zone HD (no image change) -->
+        <div class="dash-card">
+          <h3>Views by Channel (channel in Portuguese)</h3>
+          <img src="cinema_zone_hd.jpg" class="dash-img" alt="Views by channel Cinema Zone HD">
+        </div>
+        <!-- Update caption for views by channel nuevas peliculas (no image change) -->
+        <div class="dash-card">
+          <h3>Views by Channel</h3>
+          <img src="nuevas_peliculas.jpg" class="dash-img" alt="Views by channel nuevas peliculas">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">© 2025 PliPly — YouTube-first studio</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

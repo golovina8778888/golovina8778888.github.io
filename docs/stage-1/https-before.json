@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://pliply.pro/",
+    "returncode": 0,
+    "headers": "HTTP/2 200 \nserver: GitHub.com\ncontent-type: text/html; charset=utf-8\nlast-modified: Fri, 24 Apr 2026 10:24:39 GMT\naccess-control-allow-origin: *\netag: \"69eb44e7-6c78\"\nexpires: Wed, 21 Oct 2026 04:21:53 GMT\ncache-control: max-age=600\nx-proxy-cache: MISS\nx-github-request-id: CC9C:74044:F0EB5:FF5F6:6AD83B89\nx-github-edge-region: southeastasia\naccept-ranges: bytes\nage: 0\ndate: Wed, 21 Oct 2026 04:11:54 GMT\nvia: 1.1 varnish\nx-served-by: cache-sin-wsat1880076-SIN\nx-cache: MISS\nx-cache-hits: 0\nx-timer: S1792555914.541881,VS0,VE662\nvary: Accept-Encoding\nx-fastly-request-id: 17755a3bf6966d51437aa706ba437d08ba6f5653\ncontent-length: 27768\n\n",
+    "stderr": ""
+  },
+  {
+    "url": "http://pliply.pro/",
+    "returncode": 0,
+    "headers": "HTTP/1.1 200 OK\nConnection: keep-alive\nContent-Length: 27768\nServer: GitHub.com\nContent-Type: text/html; charset=utf-8\nLast-Modified: Fri, 24 Apr 2026 10:24:39 GMT\nAccess-Control-Allow-Origin: *\nETag: \"69eb44e7-6c78\"\nexpires: Wed, 21 Oct 2026 04:21:54 GMT\nCache-Control: max-age=600\nx-proxy-cache: MISS\nX-GitHub-Request-Id: C5F4:3452E2:110A62:11F512:6AD83B89\nx-github-edge-region: uksouth\nAccept-Ranges: bytes\nAge: 0\nDate: Wed, 21 Oct 2026 04:11:54 GMT\nVia: 1.1 varnish\nX-Served-By: cache-sin-wsat1880025-SIN\nX-Cache: MISS\nX-Cache-Hits: 0\nX-Timer: S1792555914.302049,VS0,VE406\nVary: Accept-Encoding\nX-Fastly-Request-ID: 1aa46c805bb79d5e5bd07070d855fa8f70ff5b32\n\n",
+    "stderr": ""
+  },
+  {
+    "url": "https://www.pliply.pro/",
+    "returncode": 0,
+    "headers": "HTTP/2 301 \nserver: GitHub.com\ncontent-type: text/html\nlocation: https://pliply.pro/\nx-github-request-id: 5C42:3AB3FA:FE87D:10CFA9:6AD83B8A\nx-github-edge-region: southeastasia\naccept-ranges: bytes\nage: 0\ndate: Wed, 21 Oct 2026 04:11:55 GMT\nvia: 1.1 varnish\nx-served-by: cache-sin-wsat1880021-SIN\nx-cache: MISS\nx-cache-hits: 0\nx-timer: S1792555915.090916,VS0,VE235\nvary: Accept-Encoding\nx-fastly-request-id: 972e730c7f6e879b12e27908e97f50068d336ad8\ncontent-length: 162\n\n",
+    "stderr": ""
+  },
+  {
+    "url": "http://www.pliply.pro/",
+    "returncode": 0,
+    "headers": "HTTP/1.1 301 Moved Permanently\nConnection: keep-alive\nContent-Length: 162\nServer: GitHub.com\nContent-Type: text/html\nLocation: http://pliply.pro/\nX-GitHub-Request-Id: DFF6:33B59:F9F58:10869D:6AD83B8B\nx-github-edge-region: southeastasia\nAccept-Ranges: bytes\nAge: 0\nDate: Wed, 21 Oct 2026 04:11:55 GMT\nVia: 1.1 varnish\nX-Served-By: cache-sin-wsat1880089-SIN\nX-Cache: MISS\nX-Cache-Hits: 0\nX-Timer: S1792555915.426257,VS0,VE235\nVary: Accept-Encoding\nX-Fastly-Request-ID: 806d922a4742ab68bf2d65527537312efddb28b1\n\n",
+    "stderr": ""
+  },
+  {
+    "url": "https://golovina8778888.github.io/",
+    "returncode": 0,
+    "headers": "HTTP/2 301 \nserver: GitHub.com\ncontent-type: text/html\nlocation: http://pliply.pro/\nx-github-request-id: ABC6:30979D:F81E9:1068F7:6AD83B8B\nx-github-edge-region: southeastasia\naccept-ranges: bytes\nage: 0\ndate: Wed, 21 Oct 2026 04:11:56 GMT\nvia: 1.1 varnish\nx-served-by: cache-sin-wsat1880071-SIN\nx-cache: MISS\nx-cache-hits: 0\nx-timer: S1792555916.807719,VS0,VE231\nvary: Accept-Encoding\nx-fastly-request-id: a6d9b199004375ac786ba9d8327eabb55f47fe5b\ncontent-length: 162\n\n",
+    "stderr": ""
+  }
+]

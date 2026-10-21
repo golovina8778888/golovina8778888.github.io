@@ -1,0 +1,125 @@
+{
+  "checked_blobs": 57,
+  "historical_forms": [
+    {
+      "sha": "464a04320fbe9f5902799ac96c8f795fe1bf0022",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:PliPlyFilm@gmail.com\">PliPlyFilm@gmail.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:PliPlyFilm@gmail.com\">PliPlyFilm@gmail.com</a></li>"
+      ]
+    },
+    {
+      "sha": "94659588672e21332a5ca950091c49fe25fcb786",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:PliPlyFilm@gmail.com\">PliPlyFilm@gmail.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:PliPlyFilm@gmail.com\">PliPlyFilm@gmail.com</a></li>"
+      ]
+    },
+    {
+      "sha": "56aaf578038a56edc350a0acb5f57fda1b545c09",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@pliply.com\">contact@pliply.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@pliply.com\">contact@pliply.com</a></li>"
+      ]
+    },
+    {
+      "sha": "30488bd1b07b254e81c739a0c337dade7278e01a",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@fliplay.com\">contact@fliplay.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@fliplay.com\">contact@fliplay.com</a></li>"
+      ]
+    },
+    {
+      "sha": "9af307a7d97c16ad2e8f81320c185b7e688583a9",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@fliplay.com\">contact@fliplay.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@fliplay.com\">contact@fliplay.com</a></li>"
+      ]
+    },
+    {
+      "sha": "87189b31c952989abe0c198e18612f6cec4e99d1",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>"
+      ]
+    },
+    {
+      "sha": "049ee2de3a97a3c8014107152ab3e5639b4c75e9",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>"
+      ]
+    },
+    {
+      "sha": "825ef520000262ee24852aaf8462d29029ebf157",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>"
+      ]
+    },
+    {
+      "sha": "b6c9b86692b0c09bfab8ce7fb511dda4a6c319a1",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>"
+      ]
+    },
+    {
+      "sha": "f6bc4efe7628bb92f6d363f4831aae891012c3e6",
+      "forms": [
+        "<form action=\"#\" method=\"post\" onsubmit=\"return false;\">\n            <input type=\"email\" placeholder=\"Your Email\" required>\n            <button type=\"submit\">Subscribe</button>\n          </form>"
+      ],
+      "handlers": [
+        "            <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>",
+        "          <form action=\"#\" method=\"post\" onsubmit=\"return false;\">",
+        "            <button type=\"submit\">Subscribe</button>",
+        "          <li><a href=\"mailto:contact@mediavision.com\">contact@mediavision.com</a></li>"
+      ]
+    }
+  ]
+}

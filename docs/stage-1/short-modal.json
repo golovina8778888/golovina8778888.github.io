@@ -1,0 +1,35 @@
+{
+  "en": {
+    "client": 466,
+    "dialog": {
+      "bottom": 484,
+      "height": 468,
+      "left": 19,
+      "right": 301,
+      "top": 16,
+      "width": 282,
+      "x": 19,
+      "y": 16
+    },
+    "dialogScroll": 799,
+    "focus": "contact-email",
+    "scroll": 320,
+    "width": 320
+  },
+  "ru": {
+    "client": 466,
+    "dialog": {
+      "bottom": 484,
+      "height": 468,
+      "left": 19,
+      "right": 301,
+      "top": 16,
+      "width": 282,
+      "x": 19,
+      "y": 16
+    },
+    "dialogScroll": 823,
+    "scroll": 320,
+    "width": 320
+  }
+}

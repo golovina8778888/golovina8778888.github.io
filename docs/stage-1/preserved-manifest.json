@@ -1,0 +1,92 @@
+[
+  {
+    "path": "stats.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "d6acf4f4957d6687a0492e34a2136fba15870fd836a2b4a8960538d1ca4e29bd",
+    "currently_public": true
+  },
+  {
+    "path": "process.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "bd0d17ba1b251b9e37bb84f588c0f29a0ab3943cdf4524da750cf8dece15ba43",
+    "currently_public": true
+  },
+  {
+    "path": "contact.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "0f7b7f4c3b651727d7b298fa242086cf25758f435208284df1dc4f58ddd34207",
+    "currently_public": true
+  },
+  {
+    "path": "stats_old.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "a8b80609e7688c5e63dc5856dc5da6ea12efcc5f14debe19310985751626eed1",
+    "currently_public": true
+  },
+  {
+    "path": "work_old.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "06bdd464e1dc534b139af5bee3d2841c1fede409723a8c1043bc73a01dc6f18d",
+    "currently_public": true
+  },
+  {
+    "path": "work_old2.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "7c754d0be5fc8b2aaac0190615b8ce630ecf56ca08156fb2d7be1eb967a37ea5",
+    "currently_public": true
+  },
+  {
+    "path": "work_for_upload.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "13d15c03c905a6ab7e3ea12630aad0e7433bd3b1217ea3accf8692be23eedc4f",
+    "currently_public": true
+  },
+  {
+    "path": "work.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "13d15c03c905a6ab7e3ea12630aad0e7433bd3b1217ea3accf8692be23eedc4f",
+    "currently_public": true
+  },
+  {
+    "path": "stats_old5.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "e2b0db3673f5d1c99ec6a4e43b2b6c0a5f1ebeb4b2fece6ba5d7454317c182c4",
+    "currently_public": true
+  },
+  {
+    "path": "stats_old2.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "7c8ea9e1e90a1f6e04b4e3578b222d0494bb98488c3cb53b6a8fc165cc424c4a",
+    "currently_public": true
+  },
+  {
+    "path": "services.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "0b687c3ede70e6c1da46a86c96de080049dd257fcaa098ca7a56b7fce6e35221",
+    "currently_public": true
+  },
+  {
+    "path": "stats_old3.html",
+    "source_commit": "3c7610571a076bed908ec05f1f65c159c38aa530",
+    "sha256": "d2bda27c6dd1b6d89648737e586f7b19212276200f85be63fd4a9da5736c4708",
+    "currently_public": true
+  },
+  {
+    "path": "stats_old4.html",
+    "source_commit": "862df652518d6c6650365fc22d4ec9b8acdf5a58",
+    "sha256": "e2b0db3673f5d1c99ec6a4e43b2b6c0a5f1ebeb4b2fece6ba5d7454317c182c4",
+    "currently_public": false
+  },
+  {
+    "path": "stats_updated.html",
+    "source_commit": "6e1d2486751b0dd6bbc48f47bb8e06677cd7fdbd",
+    "sha256": "413c1f78fa22adaeef64016ebcfa8040957321758656b69d97fe7ceb432475c5",
+    "currently_public": false
+  },
+  {
+    "path": "work_updated.html",
+    "source_commit": "30f7649a83b7a028439dd1d9a3a48cb688ab3e0c",
+    "sha256": "595703492907e20ab84e680c0646150edae75c78555c4736a50983d8fd715d53",
+    "currently_public": false
+  }
+]

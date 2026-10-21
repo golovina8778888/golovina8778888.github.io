@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-21",
+  "preview": "Internal HTTP preview; production upgrade-insecure-requests omitted only from QA copy",
+  "viewportEN": [
+    {
+      "width": 320,
+      "clientWidth": 305,
+      "lang": "en",
+      "scrollWidth": 305
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "lang": "en",
+      "scrollWidth": 375
+    },
+    {
+      "width": 768,
+      "clientWidth": 753,
+      "lang": "en",
+      "scrollWidth": 753
+    },
+    {
+      "width": 1440,
+      "clientWidth": 1425,
+      "lang": "en",
+      "scrollWidth": 1425
+    }
+  ],
+  "viewportRU": [
+    {
+      "width": 320,
+      "clientWidth": 305,
+      "lang": "ru",
+      "scrollWidth": 305
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "lang": "ru",
+      "scrollWidth": 375
+    },
+    {
+      "width": 768,
+      "clientWidth": 753,
+      "lang": "ru",
+      "scrollWidth": 753
+    },
+    {
+      "width": 1440,
+      "clientWidth": 1425,
+      "lang": "ru",
+      "scrollWidth": 1425
+    }
+  ],
+  "form": [
+    {
+      "mode": "accepted",
+      "status": "Сервис формы принял сообщение. Доставка письма не подтверждена. Ваш текст сохранён в этом окне.",
+      "disabled": true
+    },
+    {
+      "mode": "rateLimited",
+      "status": "Достигнут лимит сервиса. Подождите перед повтором или напишите на adm@pliply.pro. Текст остался в окне.",
+      "enabled": true
+    },
+    {
+      "mode": "rejected",
+      "status": "Сервис не принял эти данные. Проверьте поля или напишите на adm@pliply.pro. Текст остался в окне.",
+      "enabled": true
+    },
+    {
+      "mode": "unavailable",
+      "status": "Сервис формы недоступен. Текст остался в окне. Можно повторить попытку или написать на adm@pliply.pro.",
+      "enabled": true
+    },
+    {
+      "mode": "unknown",
+      "status": "Не удалось подтвердить приём сообщения. Текст остался в окне. Перед повтором лучше уточнить по adm@pliply.pro, чтобы избежать дублей.",
+      "enabled": true
+    },
+    {
+      "mode": "timeout",
+      "status": "Не удалось подтвердить приём сообщения. Текст остался в окне. Перед повтором лучше уточнить по adm@pliply.pro, чтобы избежать дублей.",
+      "enabled": true
+    },
+    {
+      "mode": "transport-error",
+      "status": "Не удалось подтвердить приём сообщения. Текст остался в окне. Перед повтором лучше уточнить по adm@pliply.pro, чтобы избежать дублей.",
+      "enabled": true
+    }
+  ],
+  "faults": [
+    {
+      "mode": "no-three",
+      "scene": "static",
+      "lang": "ru"
+    },
+    {
+      "mode": "no-gsap",
+      "scene": "static",
+      "lang": "ru"
+    },
+    {
+      "mode": "no-cdn",
+      "scene": "static",
+      "lang": "ru"
+    },
+    {
+      "mode": "no-webgl",
+      "scene": "static",
+      "lang": "ru"
+    },
+    {
+      "mode": "reduced-motion",
+      "scene": "reduced-motion",
+      "lang": "ru"
+    },
+    {
+      "mode": "storage-denied",
+      "lang": "ru"
+    }
+  ],
+  "csp": {
+    "inlineExecuted": false,
+    "handlerExecuted": false
+  },
+  "legacyWork": {
+    "images": 0,
+    "confidentialityNotice": true
+  },
+  "limitations": [
+    "WebGL unavailable in cloud browser",
+    "Physical devices not tested",
+    "Phone dialog rerun not completed"
+  ]
+}

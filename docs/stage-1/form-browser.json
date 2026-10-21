@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "accepted",
+    "disabled": true,
+    "message": "Local test only. No email should be sent.",
+    "open": true,
+    "status": "The form service accepted your message. Email delivery has not been confirmed. Your text is kept here."
+  },
+  {
+    "mode": "rateLimited",
+    "disabled": false,
+    "message": "Local test only. No email should be sent.",
+    "open": true,
+    "status": "The form service limit was reached. Please wait before retrying, or email adm@pliply.pro. Your text is kept here."
+  },
+  {
+    "mode": "rejected",
+    "disabled": false,
+    "message": "Local test only. No email should be sent.",
+    "open": true,
+    "status": "The form service could not accept these details. Check the fields or email adm@pliply.pro. Your text is kept here."
+  },
+  {
+    "mode": "unavailable",
+    "disabled": false,
+    "message": "Local test only. No email should be sent.",
+    "open": true,
+    "status": "The form service is unavailable. Your text is kept here. You can retry or email adm@pliply.pro."
+  },
+  {
+    "mode": "unknown",
+    "disabled": false,
+    "message": "Local test only. No email should be sent.",
+    "open": true,
+    "status": "We could not confirm whether your message was accepted. Your text is kept here. Before retrying, consider emailing adm@pliply.pro to avoid duplicates."
+  },
+  {
+    "mode": "timeout",
+    "disabled": false,
+    "message": "Local test only. No email should be sent.",
+    "open": true,
+    "status": "We could not confirm whether your message was accepted. Your text is kept here. Before retrying, consider emailing adm@pliply.pro to avoid duplicates."
+  }
+]
