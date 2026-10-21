@@ -1,0 +1,8 @@
+# GitHub Pages still publishes main:/ with its existing legacy Jekyll build.
+# Review evidence, local fixtures and maintenance instructions are not site pages.
+exclude:
+  - docs
+  - _tools
+  - _tests
+  - README.md
+  - README.txt

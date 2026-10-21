@@ -1,0 +1,50 @@
+[
+  {
+    "lang": "en",
+    "overflow": [],
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lang": "ru",
+    "overflow": [],
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "overflow": [],
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "lang": "ru",
+    "overflow": [],
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "overflow": [],
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lang": "ru",
+    "overflow": [],
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lang": "en",
+    "overflow": [],
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "lang": "ru",
+    "overflow": [],
+    "scroll": 1440,
+    "width": 1440
+  }
+]

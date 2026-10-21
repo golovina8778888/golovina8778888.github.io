@@ -1,0 +1,466 @@
+[
+  {
+    "file": "contact.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html",
+      "mailto:PliPlyFilm@gmail.com"
+    ]
+  },
+  {
+    "file": "process.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "services.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "assets/kpi_summary.png",
+        "class": "dash-img",
+        "alt": "KPI summary chart"
+      },
+      {
+        "src": "assets/stats_spanish.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Spanish"
+      },
+      {
+        "src": "assets/stats_english.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview English"
+      },
+      {
+        "src": "assets/stats_portuguese.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Portuguese"
+      },
+      {
+        "src": "assets/stats2.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Ukrainian"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats_old.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "analytics_overview.jpg",
+        "class": "dash-img",
+        "alt": "Channel analytics overview"
+      },
+      {
+        "src": "views_content.jpg",
+        "class": "dash-img",
+        "alt": "Content views advanced with revenue data"
+      },
+      {
+        "src": "lifetime_metrics.jpg",
+        "class": "dash-img",
+        "alt": "Lifetime metrics views & watch time"
+      },
+      {
+        "src": "revenue_lifetime.jpg",
+        "class": "dash-img",
+        "alt": "Lifetime revenue chart"
+      },
+      {
+        "src": "analytics_28days.jpg",
+        "class": "dash-img",
+        "alt": "Last 28 days analytics"
+      },
+      {
+        "src": "metrics_28days.jpg",
+        "class": "dash-img",
+        "alt": "Metrics views & watch time 28 days"
+      },
+      {
+        "src": "revenue_28days.jpg",
+        "class": "dash-img",
+        "alt": "Revenue chart 28 days"
+      },
+      {
+        "src": "cinema_zone_hd.jpg",
+        "class": "dash-img",
+        "alt": "Views by channel Cinema Zone HD"
+      },
+      {
+        "src": "nuevas_peliculas.jpg",
+        "class": "dash-img",
+        "alt": "Views by channel nuevas peliculas"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats_old2.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-26 в 00.19.49.png",
+        "class": "dash-img",
+        "alt": "KPI summary chart"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 10.58.41.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview"
+      },
+      {
+        "src": "views_content.jpg",
+        "class": "dash-img",
+        "alt": "Content views advanced with revenue data"
+      },
+      {
+        "src": "lifetime_metrics.jpg",
+        "class": "dash-img",
+        "alt": "Lifetime metrics views & watch time"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 11.10.59.png",
+        "class": "dash-img",
+        "alt": "Lifetime revenue chart"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 11.13.13.png",
+        "class": "dash-img",
+        "alt": "Last 28 days analytics overview"
+      },
+      {
+        "src": "metrics_28days.jpg",
+        "class": "dash-img",
+        "alt": "Metrics views & watch time 28 days"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 11.16.52.png",
+        "class": "dash-img",
+        "alt": "Revenue chart 28 days"
+      },
+      {
+        "src": "cinema_zone_hd.jpg",
+        "class": "dash-img",
+        "alt": "Views by channel Cinema Zone HD"
+      },
+      {
+        "src": "nuevas_peliculas.jpg",
+        "class": "dash-img",
+        "alt": "Views by channel nuevas peliculas"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats_old3.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-26 в 00.19.49.png",
+        "class": "dash-img",
+        "alt": "KPI summary chart"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 12.54.55.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Spanish"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 12.57.55.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview English"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 12.59.38.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Portuguese"
+      },
+      {
+        "src": "assets/Снимок экрана 2025-08-28 в 13.27.02.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Ukrainian"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats_old4.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "assets/kpi_summary.png",
+        "class": "dash-img",
+        "alt": "KPI summary chart"
+      },
+      {
+        "src": "assets/stats_english.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview English"
+      },
+      {
+        "src": "assets/stats_portuguese.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Portuguese"
+      },
+      {
+        "src": "assets/stats_ukrainian.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Ukrainian"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats_old5.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "assets/kpi_summary.png",
+        "class": "dash-img",
+        "alt": "KPI summary chart"
+      },
+      {
+        "src": "assets/stats_english.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview English"
+      },
+      {
+        "src": "assets/stats_portuguese.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Portuguese"
+      },
+      {
+        "src": "assets/stats_ukrainian.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Ukrainian"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "stats_updated.html",
+    "images": [
+      {
+        "src": "logo.png",
+        "alt": "PliPly.Pro logo",
+        "class": "logo"
+      },
+      {
+        "src": "assets/kpi_summary.png",
+        "class": "dash-img",
+        "alt": "KPI summary chart"
+      },
+      {
+        "src": "assets/stats_spanish.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Spanish"
+      },
+      {
+        "src": "assets/stats_english.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview English"
+      },
+      {
+        "src": "assets/stats_portuguese.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Portuguese"
+      },
+      {
+        "src": "assets/stats_ukrainian.png",
+        "class": "dash-img",
+        "alt": "Channel analytics overview Ukrainian"
+      }
+    ],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "work.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "work_for_upload.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "work_old.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "work_old2.html",
+    "images": [],
+    "backgrounds": [
+      "assets/Pagten.jpg",
+      "assets/Phobia Alone.jpg",
+      "assets/Pol Una Aventura En La USAC.jpg",
+      "assets/MV5BZmNkOWIxMmItZWE2YS00ODA0LWE0NTUtMGJiY2Q0YzEzYzkwXkEyXkFqcGc@._V1_.jpg",
+      "assets/Снимок экрана 2025-08-25 в 23.12.24.png",
+      "assets/Снимок экрана 2025-08-25 в 23.52.02.png",
+      "assets/Снимок экрана 2025-08-25 в 23.53.47.png",
+      "assets/Снимок экрана 2025-08-25 в 23.54.15.png",
+      "assets/Снимок экрана 2025-08-25 в 23.55.21.png",
+      "assets/Снимок экрана 2025-08-25 в 23.59.02.png",
+      "assets/Снимок экрана 2025-08-25 в 23.59.53.png",
+      "assets/Снимок экрана 2025-08-26 в 00.01.01.png",
+      "assets/Снимок экрана 2025-08-26 в 09.35.54.png",
+      "assets/Снимок экрана 2025-08-26 в 09.57.49.png",
+      "assets/Снимок экрана 2025-08-26 в 09.59.57.png"
+    ],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  },
+  {
+    "file": "work_updated.html",
+    "images": [],
+    "backgrounds": [],
+    "links": [
+      "index.html",
+      "process.html",
+      "services.html",
+      "work.html",
+      "stats.html",
+      "contact.html"
+    ]
+  }
+]

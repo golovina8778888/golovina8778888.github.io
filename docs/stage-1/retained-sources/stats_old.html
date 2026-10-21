@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stats — PliPly.Pro</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles for stats page */
+    .stats-section {
+      padding: 60px 20px;
+    }
+    .stats-section h2 {
+      text-align: center;
+      color: var(--ink);
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .dash-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .dash-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+      flex: 1 1 45%;
+      min-width: 280px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    .dash-card h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .dash-img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="logo.png" alt="PliPly.Pro logo" class="logo" />
+        <span class="brand-text">PliPly.Pro</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a><a href="process.html">Process</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="stats.html" class="active">Stats</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span>RETENTION</span><span>CTR</span><span>REVENUE</span><span>REACH</span><span>ANALYTICS</span><span>RETENTION</span><span>CTR</span><span>REVENUE</span><span>REACH</span><span>ANALYTICS</span>
+    </div>
+  </div>
+  <section class="section hero">
+    <div class="bigword">STATS</div>
+    <div class="kicker">Impact In Numbers</div>
+    <div class="h1">Signals That Matter</div>
+    <p class="sub">Live KPIs, consistent growth.</p>
+  </section>
+  <section class="stats-section">
+    <div class="container">
+      <h2>Key dashboards</h2>
+      <div class="dash-grid">
+        <div class="dash-card">
+          <h3>Channel analytics overview (Cinema&nbsp;First)</h3>
+          <img src="analytics_overview.jpg" class="dash-img" alt="Channel analytics overview">
+        </div>
+        <div class="dash-card">
+          <h3>Views by content with revenue</h3>
+          <img src="views_content.jpg" class="dash-img" alt="Content views advanced with revenue data">
+        </div>
+      </div>
+      <h2>Evidence from YouTube Analytics</h2>
+      <div class="dash-grid">
+        <div class="dash-card"><h3>Lifetime metrics: views &amp; watch time</h3><img src="lifetime_metrics.jpg" class="dash-img" alt="Lifetime metrics views &amp; watch time"></div>
+        <div class="dash-card"><h3>Lifetime revenue chart (Cinema&nbsp;First)</h3><img src="revenue_lifetime.jpg" class="dash-img" alt="Lifetime revenue chart"></div>
+        <div class="dash-card"><h3>Channel analytics overview (last 28 days)</h3><img src="analytics_28days.jpg" class="dash-img" alt="Last 28 days analytics"></div>
+        <div class="dash-card"><h3>Metrics: views &amp; watch time (last 28 days)</h3><img src="metrics_28days.jpg" class="dash-img" alt="Metrics views &amp; watch time 28 days"></div>
+        <div class="dash-card"><h3>Revenue chart (last 28 days)</h3><img src="revenue_28days.jpg" class="dash-img" alt="Revenue chart 28 days"></div>
+        <div class="dash-card"><h3>Views by channel: Cinema&nbsp;Zone&nbsp;HD</h3><img src="cinema_zone_hd.jpg" class="dash-img" alt="Views by channel Cinema Zone HD"></div>
+        <div class="dash-card"><h3>Views by channel: nuevas&nbsp;peliculas</h3><img src="nuevas_peliculas.jpg" class="dash-img" alt="Views by channel nuevas peliculas"></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">© 2025 PliPly — YouTube-first studio</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

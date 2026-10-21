@@ -1,0 +1,22 @@
+{
+  "back": "<a href=\"mailto:adm@pliply.pro\">adm@pliply.pro</a>",
+  "forward": "contact-email",
+  "errors": {
+    "errors": [
+      {
+        "hidden": false,
+        "text": "Укажите корректный адрес почты для ответа."
+      },
+      {
+        "hidden": false,
+        "text": "Введите сообщение (до 4 000 символов)."
+      }
+    ],
+    "focus": "contact-email"
+  },
+  "closed": {
+    "focus": "open-contact",
+    "open": false,
+    "overflow": "hidden"
+  }
+}
