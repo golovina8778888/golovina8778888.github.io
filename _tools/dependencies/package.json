@@ -4,7 +4,7 @@
   "private": true,
   "description": "Provenance and vulnerability checks for locally hosted browser libraries; no build required",
   "dependencies": {
-    "three": "0.128.0",
+    "three": "0.186.1",
     "gsap": "3.12.2"
   }
 }
