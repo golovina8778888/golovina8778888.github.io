@@ -2,7 +2,7 @@ name: Site security and Pages checks
 
 on:
   push:
-    branches: [main, codex/pliply-stage-one]
+    branches: [main, codex/pliply-stage-one, codex/pliply-english-site]
   pull_request:
   workflow_dispatch:
   schedule:
@@ -25,16 +25,24 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      - name: Build English site and verify tracked output
+        run: |
+          npm ci --prefix site-src
+          npm run build --prefix site-src
+          npm run export:pages --prefix site-src
+          git diff --exit-code -- index.html partners site-assets
       - name: Source integrity and static references
         run: |
           python3 _tools/harden.py --check
-          python3 _tools/check-static.py
+          python3 _tools/check-site.py
           node --check main.js
           node --check scene.js
           node --check contact-transport.js
           node --test _tests/*.test.cjs
       - name: Known vulnerabilities in the vendored runtime versions
-        run: npm audit --omit=dev --prefix _tools/dependencies
+        run: |
+          npm audit --omit=dev --prefix _tools/dependencies
+          npm audit --omit=dev --prefix site-src
       - name: Scan history and working tree for exposed credentials
         run: |
           python3 _tools/install-gitleaks.py "$RUNNER_TEMP/gitleaks"
