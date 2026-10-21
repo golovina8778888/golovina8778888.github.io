@@ -136,7 +136,7 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
     requestRef.current = controller;
     const timeout = setTimeout(() => controller.abort(), 15000);
     try {
-      await sendInquiry({ ...draft, honey: form.elements._honey.value }, topic, controller.signal);
+      await sendInquiry({ ...draft, honey: form.elements._gotcha.value }, topic, controller.signal);
       setStatus("sent");
     } catch {
       if (dialogRef.current?.open) setStatus("error");
@@ -178,7 +178,7 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
           onSubmit={submit}
         >
           <div className="honey-field" aria-hidden="true">
-            <label>Leave this field empty<input name="_honey" type="text" tabIndex={-1} autoComplete="off" /></label>
+            <label>Leave this field empty<input name="_gotcha" type="text" tabIndex={-1} autoComplete="off" /></label>
           </div>
           <div className="form-grid">
             <label>
@@ -245,7 +245,7 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
             <ArrowRight aria-hidden="true" />
           </button>
           <p className="form-footnote">
-            {"A brief overview is enough. Your inquiry is processed by FormSubmit and emailed to PLIPLY."}
+            {"A brief overview is enough. Your inquiry is processed by Formspree and emailed to PLIPLY."}
           </p>
         </form>
       ) : (
