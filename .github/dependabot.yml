@@ -8,3 +8,7 @@ updates:
     directory: /_tools/dependencies
     schedule:
       interval: monthly
+  - package-ecosystem: npm
+    directory: /site-src
+    schedule:
+      interval: monthly

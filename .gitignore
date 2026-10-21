@@ -1,3 +1,5 @@
 _site/
 _tools/__pycache__/
 node_modules/
+site-src/dist/
+site-src/node_modules/

@@ -1,164 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLIPLY | DIGITAL ARCHITECTS</title>
-        <!-- Favicon and preview logo -->
-         <link rel="icon" type="image/png" href="/favicon.png" sizes="512x512">
-
-    <meta property="og:image" content="https://pliply.pro/preview-logo.png">
-    <meta name="twitter:image" content="https://pliply.pro/preview-logo.png">
-
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="main.css">
-    <meta name="description" content="PLIPLY: content, channel management, analytics, monetization and rights management.">
-    <link rel="canonical" href="https://pliply.pro/">
-    <meta property="og:title" content="PLIPLY | DIGITAL ARCHITECTS">
-    <meta property="og:description" content="Content, strategy and growth. Discuss your project with PLIPLY.">
-    <meta property="og:url" content="https://pliply.pro/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <script src="contact-config.js" integrity="sha384-MI1WvvWCFQc99+YmuW7v8YHBf4YHvzZjPZiAEMUstztbFuBvSD8QcrzdYrDjHbze" defer></script>
-    <script src="contact-transport.js" integrity="sha384-kmT3EggCscdVX2E0NgOsp1Wv5Jti7fnNRXhWA8qce4iH5Sa4pJOkb+I93qJcyH/3" defer></script>
-    <script src="main.js" integrity="sha384-/TioXqNCqRSA+Zo2WB8OR9HfyshD9jiT3cRAIhC0l+cgA0OxmZP30lJfCpwEnXd8" defer></script>
-    <script src="scene.js" integrity="sha384-tm+N27SsIWvRBKph+1ADgEB+vgkfDy8ak/hG62wqfFHXMSy4j5WhSrAu1Vhn+MDh" defer></script>
-</head>
-<body>
-
-    <canvas id="canvas-webgl" aria-hidden="true"></canvas>
-
-    <div class="hud-frame" aria-hidden="true">
-        <div class="hud-corner tl"></div>
-        <div class="hud-corner tr"></div>
-        <div class="hud-corner bl"></div>
-        <div class="hud-corner br"></div>
-        <!-- Removed system status and office text for a cleaner HUD -->
-    </div>
-
-    <nav aria-label="Language">
-        <div class="logo">PLIPLY<span>.PRO</span></div>
-        <!-- Language switcher: default EN, optional RU -->
-        <div class="lang-switch">
-            <button type="button" data-lang="en" class="active" aria-label="English" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
-        </div>
-    </nav>
-
-    <section>
-        <h1>
-            <span data-i18n="heroTitle">Global Growth.</span><br>
-            <span data-i18n="heroTitleSpan" style="color: var(--accent)">Since Day One.</span>
-        </h1>
-        <div class="hero-desc">
-            <span data-i18n="heroDesc">Content, strategy and growth. We lead channels from first views to millions of global audience.</span>
-            <br><br>
-            <span data-i18n="heroDescSpan" style="font-size: 14px; opacity: 1; text-transform: uppercase;">Strategy / Content / Automation / Monetization</span>
-        </div>
-    </section>
-
-    <section>
-        <div style="margin-bottom: 50px;">
-            <h2 data-i18n="whyItWorksTitle" style="font-family: 'Syncopate', Arial, sans-serif; text-transform: uppercase; font-size: 1.5rem; margin-bottom: 20px;">Why It Works</h2>
-            <p data-i18n="whyItWorksDesc" style="max-width: 600px; font-size: 1.1rem; opacity: 0.7;">We combine years of platform expertise with a data‑driven creative process. Always improving CTR, retention and revenue.</p>
-        </div>
-
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-big">250+</div>
-                <div class="stat-label" data-i18n="statOwners">Content Owners</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-big">500+</div>
-                <div class="stat-label" data-i18n="statRights">Rights Managed</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-big">90%</div>
-                <div class="stat-label" data-i18n="statGrowth">Growth Rate</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-big">99%</div>
-                <div class="stat-label" data-i18n="statUptime">System Uptime</div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2 data-i18n="capabilities" class="capabilities">Ca­pa­bi­li­ties</h2>
-
-        <div class="service-row">
-            <div class="srv-title" data-i18n="service01Title">01. Administration</div>
-            <div class="srv-desc" data-i18n="service01Desc">Full channel management and optimization. Tech routine is on us, creativity is on you.</div>
-        </div>
-
-        <div class="service-row">
-            <div class="srv-title" data-i18n="service02Title">02. AI Automation</div>
-            <div class="srv-desc" data-i18n="service02Desc">Automation of processes with AI. Content adaptation, tagging and metadata generation.</div>
-        </div>
-
-        <div class="service-row">
-            <div class="srv-title" data-i18n="service03Title">03. Monetization &amp; Rights</div>
-            <div class="srv-desc" data-i18n="service03Desc">Maximizing revenue and rights management (Content ID). Protecting your assets.</div>
-        </div>
-
-        <div class="service-row">
-            <div class="srv-title" data-i18n="service04Title">04. Deep Analytics</div>
-            <div class="srv-desc" data-i18n="service04Desc">Analytics and distribution. Combining expertise with data to improve CTR.</div>
-        </div>
-    </section>
-
-    <section class="footer-cta">
-        <h2 data-i18n="ctaHeading">Ready for Next Level?</h2>
-        <!-- Trigger the contact modal instead of direct mailto -->
-        <a href="mailto:adm@pliply.pro" class="btn-glitch" id="open-contact" aria-haspopup="dialog" data-i18n="ctaButton">Start Project</a>
-        
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4 data-i18n="footerCompanyTitle">PLIPLY LTD.</h4>
-                <p>Registration Number: 16766827</p>
-                <p>United Kingdom</p>
-                <p style="margin-top: 10px;">© 2025 Pliply.pro</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4 data-i18n="footerHQTitle">Headquarters</h4>
-                <p>50, Princes Street</p>
-                <p>Ipswich, IP1 1RJ</p>
-                <p>UNITED KINGDOM</p>
-            </div>
-
-            <div class="footer-col">
-                <h4 data-i18n="footerContactTitle">Contact</h4>
-                <p><a href="mailto:adm@pliply.pro">adm@pliply.pro</a></p>
-                <p><a href="tel:+995568154865">+995 568 154 865</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Native dialog makes the rest of the page inert while open. -->
-    <dialog id="contact-modal" aria-labelledby="contact-title" aria-describedby="contact-help">
-        <h3 id="contact-title" data-i18n="contactModalTitle">Write to us</h3>
-        <p id="contact-help" data-i18n="emailHelp">Compose an email to adm@pliply.pro. You will send it from your email app.</p>
-        <form id="contact-form" method="dialog" novalidate>
-            <label for="contact-email" data-i18n="emailLabel">Your email (required)</label>
-            <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-error">
-            <p id="email-error" class="field-error" hidden></p>
-            <label for="contact-message" data-i18n="contactModalLabel">Your message (required, up to 4,000 characters)</label>
-            <textarea id="contact-message" name="message" rows="5" required maxlength="4000" aria-describedby="message-error"></textarea>
-            <p id="message-error" class="field-error" hidden></p>
-            <div class="trap" aria-hidden="true"><label for="contact-website">Leave this field empty</label><input id="contact-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
-            <p id="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
-            <div class="modal-actions">
-                <button type="button" id="close-contact" data-i18n="cancel">Cancel</button>
-                <button type="submit" id="contact-submit" class="primary" data-i18n="openEmail">Open email app</button>
-                <button type="button" id="copy-message" data-i18n="copyMessage">Copy message</button>
-            </div>
-            <p class="direct-contact"><span data-i18n="directEmail">Or email us directly:</span> <a href="mailto:adm@pliply.pro">adm@pliply.pro</a></p>
-        </form>
-    </dialog>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PLIPLY works with film companies and video catalog owners on distribution, YouTube channel development and monetization."
+    />
+    <link rel="canonical" href="https://pliply.pro/" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <meta property="og:title" content="PLIPLY — A Media Partner for Rights Holders" />
+    <meta property="og:description" content="Film distribution, YouTube channel development and monetization for rights holders." />
+    <meta property="og:url" content="https://pliply.pro/" />
+    <meta property="og:type" content="website" />
+    <title>PLIPLY — A Media Partner for Rights Holders</title>
+    <script type="module" crossorigin src="/site-assets/main-Bk825uVj.js" integrity="sha384-OZo7Xo6cjL4vI+7UyzupYP3EJ5jfNkKJbsbN9S7BlzP5zXo6aAx8CuBDQS5EUqjT"></script>
+    <link rel="stylesheet" crossorigin href="/site-assets/main-BqLB7fP2.css" integrity="sha384-Ul9BHycHCDsnOpcPS/JIQU5NgM/pBI69DkwMeeDyRyS8pGMm9SMx5tBl2KjxMzmL">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

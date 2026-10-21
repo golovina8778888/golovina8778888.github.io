@@ -8,6 +8,28 @@ exclude:
   - SECURITY.md
   - app.js
   - assets
+  - site-src
+  - vendor
+  - main.css
+  - main.js
+  - scene.js
+  - styles.css
+  - contact-config.js
+  - contact-transport.js
+  - logo.png
+  - preview-logo.png
+  - contact.html
+  - process.html
+  - services.html
+  - stats.html
+  - stats_old.html
+  - stats_old2.html
+  - stats_old3.html
+  - stats_old5.html
+  - work.html
+  - work_for_upload.html
+  - work_old.html
+  - work_old2.html
   - vendor/manifest.json
   - analytics_28days.jpg
   - analytics_overview.jpg
