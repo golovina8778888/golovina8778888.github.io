@@ -55,7 +55,9 @@
 Сырые результаты рядом: node-tests.txt, npm-audit.json, integrity.json,
 static-check.json, gitleaks-history.json, gitleaks-working-tree.json, browser-ui.json.
 Сборка GitHub Actions и проверка реального Jekyll output фиксируются отдельно
-после загрузки коммита, до решения о выпуске.
+в статусах PR. Первый прогон подтвердил сборку и исключение изображений,
+но обнаружил автоматически созданный CSS темы Primer. В списке публикации
+разрешён только этот точный путь assets/css/style.css; прочие assets запрещены.
 
 ## Пределы проверки и оставшиеся действия
 

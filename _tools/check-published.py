@@ -9,6 +9,9 @@ allowed = {p.name for p in root.glob('*.html')} | {
     'main.css', 'styles.css', 'main.js', 'scene.js', 'contact-config.js',
     'contact-transport.js', 'favicon.png', 'preview-logo.png', 'logo.png',
     'robots.txt', 'sitemap.xml', 'CNAME',
+    # GitHub Pages' default Primer theme generates this even for static HTML.
+    # No other path under assets/ is allowed, including the former project images.
+    'assets/css/style.css',
 }
 allowed |= {'vendor/' + p.name for p in (root / 'vendor').iterdir() if p.suffix in {'.js', '.txt'}}
 files = [p for p in published.rglob('*') if p.is_file()]
