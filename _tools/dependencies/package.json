@@ -5,6 +5,6 @@
   "description": "Provenance and vulnerability checks for locally hosted browser libraries; no build required",
   "dependencies": {
     "three": "0.128.0",
-    "gsap": "3.12.2"
+    "gsap": "3.15.0"
   }
 }
