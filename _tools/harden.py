@@ -16,7 +16,7 @@ POLICY = (
     "default-src 'none'; script-src 'self'; script-src-attr 'none'; "
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
     "font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; "
-    "connect-src https://formsubmit.co; object-src 'none'; base-uri 'none'; "
+    "connect-src https://formspree.io; object-src 'none'; base-uri 'none'; "
     "form-action 'none'; frame-src 'none'; worker-src 'none'; "
     "media-src 'none'; manifest-src 'self'; upgrade-insecure-requests"
 )
