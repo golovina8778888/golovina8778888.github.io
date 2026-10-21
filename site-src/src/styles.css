@@ -746,15 +746,15 @@ html:has(.contact-dialog[open]) {
   }
   .hero {
     height: auto;
-    min-height: 680px;
+    min-height: 0;
   }
   .hero-art {
     object-position: 58% center;
     opacity: 0.72;
   }
   .hero-content {
-    padding-top: 138px;
-    padding-bottom: 100px;
+    padding-top: clamp(118px, 34vw, 138px);
+    padding-bottom: 48px;
   }
   .hero h1 {
     font-size: clamp(32px, 9.1vw, 48px);
@@ -937,11 +937,11 @@ html:has(.contact-dialog[open]) {
     flex-basis: 100%;
   }
   .partner-hero {
-    min-height: 640px;
+    min-height: 0;
   }
   .partner-hero-content {
-    padding-top: 140px;
-    padding-bottom: 90px;
+    padding-top: clamp(120px, 34vw, 140px);
+    padding-bottom: 52px;
   }
   .partner-hero h1 {
     font-size: clamp(40px, 10.3vw, 53px);
@@ -1078,6 +1078,7 @@ html:has(.contact-dialog[open]) {
   .hero .action {
     font-size: 14px;
     padding-inline: 19px;
+    white-space: normal;
   }
 }
 @media (prefers-reduced-motion: reduce) {
