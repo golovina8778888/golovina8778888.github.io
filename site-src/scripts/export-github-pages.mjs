@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const source = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const root = path.resolve(source, "..");
 const built = path.join(source, "dist/client");
-const policy = "default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'self'; upgrade-insecure-requests";
+const policy = "default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'self'; upgrade-insecure-requests";
 
 if (!existsSync(path.join(built, "index.html")) || !existsSync(path.join(built, "partners/index.html"))) {
   throw new Error("Run npm run build before exporting pages");

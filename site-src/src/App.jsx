@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   ArrowRight,
   EnvelopeSimple,
@@ -6,6 +6,7 @@ import {
   X,
   Plus,
 } from "@phosphor-icons/react";
+import { sendInquiry } from "./contact";
 
 
 const services = [
@@ -105,41 +106,43 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
     email: "",
     message: "",
   });
-  const [prepared, setPrepared] = useState(false);
-  const [copyState, setCopyState] = useState("");
+  const [status, setStatus] = useState("idle");
   const [formError, setFormError] = useState(null);
-  const textRef = useRef(null);
-  useEffect(() => {
-    if (!dialogRef.current?.open) return;
-    const target = prepared
-      ? textRef.current
-      : dialogRef.current.querySelector('input[name="name"]');
-    target?.focus();
-  }, [prepared, dialogRef]);
-  const body = `Hello PLIPLY team,\n\n${draft.message.trim()}\n\nName: ${draft.name.trim()}\nCompany: ${draft.company.trim() || "Not specified"}\nContact: ${draft.email.trim()}`;
-  const mailto = `mailto:adm@pliply.pro?subject=${encodeURIComponent(topic || "Partnership inquiry — PLIPLY")}&body=${encodeURIComponent(body)}`;
+  const requestRef = useRef(null);
   function update(event) {
     const { name, value } = event.target;
     setDraft((previous) => ({ ...previous, [name]: value }));
-    setCopyState("");
+    if (status === "error") setStatus("idle");
     if (formError?.field === name) setFormError(null);
   }
-  async function copy() {
+  async function submit(event) {
+    event.preventDefault();
+    if (status === "sending") return;
+    const form = event.currentTarget;
+    const error = !draft.name.trim()
+      ? { field: "name", message: "Please enter your name." }
+      : !draft.email.trim() || !form.elements.email.validity.valid
+        ? { field: "email", message: "Please enter a valid email address." }
+        : !draft.message.trim()
+          ? { field: "message", message: "Tell us briefly about your catalog and goals." }
+          : null;
+    setFormError(error);
+    if (error) {
+      form.elements[error.field].focus();
+      return;
+    }
+    setStatus("sending");
+    const controller = new AbortController();
+    requestRef.current = controller;
+    const timeout = setTimeout(() => controller.abort(), 15000);
     try {
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(body);
-      } else {
-        textRef.current.focus();
-        textRef.current.select();
-        if (!document.execCommand("copy")) throw new Error("Copy unavailable");
-      }
-      setCopyState("Email text copied.");
+      await sendInquiry({ ...draft, honey: form.elements._honey.value }, topic, controller.signal);
+      setStatus("sent");
     } catch {
-      textRef.current.focus();
-      textRef.current.select();
-      setCopyState(
-        "Text selected. Copy it and send it to adm@pliply.pro.",
-      );
+      if (dialogRef.current?.open) setStatus("error");
+    } finally {
+      clearTimeout(timeout);
+      if (requestRef.current === controller) requestRef.current = null;
     }
   }
   return (
@@ -149,8 +152,9 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
       aria-labelledby="contact-title"
       aria-describedby="contact-note"
       onClose={() => {
-        setPrepared(false);
-        setCopyState("");
+        requestRef.current?.abort();
+        if (status === "sent") setDraft({ name: "", company: "", email: "", message: "" });
+        setStatus("idle");
         setFormError(null);
         if (openerRef.current?.isConnected) openerRef.current.focus();
       }}
@@ -166,29 +170,16 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
       <p className="eyebrow">{"PARTNERSHIP"}</p>
       <h2 id="contact-title">{"Let's discuss your catalog"}</h2>
       <p id="contact-note" className="dialog-note">
-        {"We'll prepare an email to"} <a href="mailto:adm@pliply.pro">adm@pliply.pro</a>.
-        {"You will send it from your email app."}
+        {"Send your inquiry directly to the PLIPLY team."}
       </p>
-      {!prepared ? (
+      {status !== "sent" ? (
         <form
           noValidate
-          onSubmit={(event) => {
-            event.preventDefault();
-            const error = !draft.name.trim()
-              ? { field: "name", message: "Please enter your name." }
-              : !draft.email.trim() || !event.currentTarget.elements.email.validity.valid
-                ? { field: "email", message: "Please enter a valid email address." }
-                : !draft.message.trim()
-                  ? { field: "message", message: "Tell us briefly about your catalog and goals." }
-                  : null;
-            setFormError(error);
-            if (error) {
-              event.currentTarget.elements[error.field].focus();
-              return;
-            }
-            setPrepared(true);
-          }}
+          onSubmit={submit}
         >
+          <div className="honey-field" aria-hidden="true">
+            <label>Leave this field empty<input name="_honey" type="text" tabIndex={-1} autoComplete="off" /></label>
+          </div>
           <div className="form-grid">
             <label>
               {"Your name"}
@@ -243,41 +234,26 @@ function ContactDialog({ dialogRef, openerRef, topic }) {
             />
           </label>
           {formError && <p className="form-error" id="form-error" role="alert">{formError.message}</p>}
-          <button className="action form-submit" type="submit">
-            <span>{"Prepare email"}</span>
+          {status === "error" && (
+            <p className="form-error" role="alert">
+              {"We couldn't confirm your submission. Your details are still here. Before retrying, check with us at "}
+              <a href="mailto:adm@pliply.pro">adm@pliply.pro</a>.
+            </p>
+          )}
+          <button className="action form-submit" type="submit" disabled={status === "sending"}>
+            <span>{status === "sending" ? "Sending…" : "Send inquiry"}</span>
             <ArrowRight aria-hidden="true" />
           </button>
           <p className="form-footnote">
-            {"A brief overview is enough to get started."}
+            {"A brief overview is enough. Your inquiry is processed by FormSubmit and emailed to PLIPLY."}
           </p>
         </form>
       ) : (
-        <div className="prepared-letter">
-          <p className="prepared-status" role="status">
-            {"Your email is ready to send from your email app."}
-          </p>
-          <label>
-            {"Email text"}
-            <textarea ref={textRef} readOnly value={body} rows={7} />
-          </label>
-          <div className="prepared-actions">
-            <a className="action" href={mailto}>
-              <span>{"Open email app"}</span>
-              <ArrowRight aria-hidden="true" />
-            </a>
-            <button type="button" className="text-button" onClick={copy}>
-              {"Copy text"}
-            </button>
-          </div>
-          <p role="status" className="copy-status">
-            {copyState}
-          </p>
-          <button
-            type="button"
-            className="text-button"
-            onClick={() => setPrepared(false)}
-          >
-            {"Back to editing"}
+        <div className="sent-message" role="status">
+          <p>{"Thank you. Your inquiry has been submitted."}</p>
+          <button type="button" className="action" onClick={() => dialogRef.current.close()}>
+            <span>{"Close"}</span>
+            <ArrowRight aria-hidden="true" />
           </button>
         </div>
       )}

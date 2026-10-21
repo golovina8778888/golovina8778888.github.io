@@ -568,6 +568,8 @@ html:has(.contact-dialog[open]) {
   border-radius: 8px;
   width: min(680px, calc(100% - 32px));
   max-height: calc(100dvh - 36px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 40px;
 }
 .contact-dialog::backdrop {
@@ -642,28 +644,27 @@ html:has(.contact-dialog[open]) {
 .form-submit {
   width: 100%;
 }
+.form-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+.honey-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .form-footnote {
   font-size: 12px;
   color: #a9abad;
   margin-top: 14px;
 }
-.prepared-status {
-  margin-bottom: 20px;
+.sent-message p {
+  margin-bottom: 28px;
   color: #e0e0e3;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
-}
-.prepared-actions {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-.copy-status {
-  color: #c2c4c7;
-  font-size: 14px;
-  margin-block: 16px;
-  min-height: 20px;
 }
 @media (min-width: 1600px) {
   .hero-description {
@@ -970,9 +971,6 @@ html:has(.contact-dialog[open]) {
   }
   .contact-dialog label {
     margin-bottom: 15px;
-  }
-  .prepared-actions {
-    gap: 14px;
   }
 }
 @media (max-width: 370px) {

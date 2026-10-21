@@ -94,7 +94,7 @@ class Handler(SimpleHTTPRequestHandler):
             if resource:
                 return self.send_error(404)
             s = (ROOT / 'index.html').read_text().replace('href="main.css"', 'href="/main.css"')
-            s = s.replace('connect-src https://formspree.io;', "connect-src 'self';")
+            s = s.replace('connect-src https://formsubmit.co;', "connect-src 'self';")
             s = s.replace('src="main.js"', 'src="/main.js"')
             for name in ('scene.js','contact-config.js','contact-transport.js'):
                 s = re.sub(r'<script src="' + re.escape(name) + r'"[^>]*></script>', '<script src="/__test/' + mode + '/' + name + '" defer></script>', s)

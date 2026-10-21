@@ -39,6 +39,7 @@ jobs:
           node --check scene.js
           node --check contact-transport.js
           node --test _tests/*.test.cjs
+          npm test --prefix site-src
       - name: Known vulnerabilities in the vendored runtime versions
         run: |
           npm audit --omit=dev --prefix _tools/dependencies
