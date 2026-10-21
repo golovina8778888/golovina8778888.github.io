@@ -749,8 +749,16 @@ html:has(.contact-dialog[open]) {
     min-height: 0;
   }
   .hero-art {
-    object-position: 58% center;
+    object-position: 68% center;
     opacity: 0.72;
+  }
+  .hero:not(.partner-hero) {
+    overflow: hidden;
+  }
+  .hero:not(.partner-hero) .hero-art {
+    top: -95px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
   }
   .hero-content {
     padding-top: clamp(118px, 34vw, 138px);
@@ -770,7 +778,7 @@ html:has(.contact-dialog[open]) {
     color: #eee;
   }
   .hero .action {
-    margin-top: 28px;
+    margin-top: clamp(155px, 42vw, 185px);
     width: 100%;
     justify-content: space-between;
   }
