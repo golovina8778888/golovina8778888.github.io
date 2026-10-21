@@ -3,17 +3,29 @@
     'use strict';
     function endpoint(value) {
         if (typeof value !== 'string') return '';
+        if (value !== value.trim()) return '';
         return /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(value) ? value : '';
+    }
+    function validPayload(payload) {
+        return Boolean(payload && typeof payload.email === 'string' &&
+            payload.email.trim().length <= 254 && /^[^\s@<>]+@[^\s@<>]+$/.test(payload.email.trim()) &&
+            typeof payload.message === 'string' && payload.message.trim() &&
+            payload.message.length <= 4000 && !payload._gotcha);
     }
     async function submit(url, payload, options = {}) {
         if (!endpoint(url)) return { state: 'unconfigured' };
-        const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), options.timeout || 15000);
+        if (!validPayload(payload)) return { state: 'rejected' };
+        let timer;
         try {
+            const controller = new AbortController();
+            timer = setTimeout(() => controller.abort(), options.timeout || 15000);
             const response = await (options.fetch || root.fetch)(url, {
                 method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-                credentials: 'omit', redirect: 'error', signal: controller.signal,
-                body: JSON.stringify(payload)
+                credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer', signal: controller.signal,
+                body: JSON.stringify({
+                    email: payload.email.trim(), message: payload.message,
+                    _subject: 'PLIPLY project inquiry', language: payload.language === 'ru' ? 'ru' : 'en', _gotcha: ''
+                })
             });
             if (response.status === 429) return { state: 'rateLimited' };
             if (response.status === 422 || response.status === 400) return { state: 'rejected' };
@@ -33,5 +45,5 @@
         return 'mailto:adm@pliply.pro?subject=' + encodeURIComponent('New Project Inquiry') +
             '&body=' + encodeURIComponent('Reply to: ' + email + '\n\n' + message);
     }
-    root.PliplyContact = Object.freeze({ endpoint, submit, mailto });
+    root.PliplyContact = Object.freeze({ endpoint, validPayload, submit, mailto });
 })(typeof window === 'undefined' ? globalThis : window);

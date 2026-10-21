@@ -1,52 +1,44 @@
 # PLIPLY static site
 
-HTML, CSS and browser JavaScript; no framework, package install or backend.
-Production is **GitHub Pages, `main:/`, legacy build**, with `CNAME=pliply.pro`.
-Pushing a feature branch does not publish it. Merging into `main` publishes it.
+The existing HTML/CSS/JS design and GitHub Pages hosting remain. No framework or
+runtime package installation is required. The current Pages source is main:/;
+merging into main publishes the site, feature-branch updates do not.
 
-## Local review
+## Checks and local review
 
 ```sh
 python3 _tools/preview.py
-# Open http://127.0.0.1:8879/
+# http://127.0.0.1:8879/
+python3 _tools/harden.py --check
+python3 _tools/check-static.py
 node --test _tests/*.test.cjs
+npm audit --omit=dev --prefix _tools/dependencies
 ```
 
-The server binds only to 127.0.0.1. `/__test/<mode>/` routes are local fixtures,
-never email handlers. See `_tools/preview.py` for available modes. Their POSTs
-stay in memory on this computer. The fixtures never forward to Formspree.
-Do not publish the preview server as a backend.
+`_tools/preview.py` binds to loopback by default, denies excluded/private paths,
+and has local-only `/__test/` fixtures. These never send email. It is not a backend.
 
-## Site files
+- `index.html`, `main.css`, `main.js`: existing EN/RU home and accessible dialog.
+- `scene.js`, `vendor/`: the same original 3D libraries, now local with SRI and
+  upstream checksum verification. No external JavaScript is loaded by the site.
+- `contact-config.js`, `contact-transport.js`: unconnected form adapter. Current
+  action prepares a mail draft or copies text, without claiming delivery.
+- Nine old Work/Stats URLs show a confidentiality notice. Their former project
+  images, root analytics files, evidence, tools and unused app.js are excluded
+  from the Pages build. Source history remains public; this is not secure erasure.
+- `docs/security-2026-10-21/verification.md`: current verification and limitations.
+- `.github/workflows/security.yml`: tests, credential scan, dependency audit and
+  actual Jekyll publication checks, with a read-only repository token.
 
-- `index.html`, `main.css`, `main.js`: current EN/RU home and accessible dialog.
-- `contact-config.js`, `contact-transport.js`: **unconnected** service adapter;
-  current action prepares an email draft or copies text, without claiming delivery.
-- `scene.js`: optional, pinned Three.js r128 / GSAP 3.12.2 / ScrollTrigger.
-  Loaded asynchronously with SRI; reduced motion skips it; failures hide it.
-- Other HTML + `styles.css`: retained legacy pages; old `app.js` is no longer
-  loaded on Stats because those pages contain no canvas mount.
-- `docs/stage-1`: URL decisions, HTTPS/form setup and review evidence.
-  Excluded from the Pages build along with local tools/tests by `_config.yml`.
+When changing a local script, run `python3 _tools/harden.py` to update its SRI.
+A dependency update must update the audit lockfile, vendored bytes, licenses,
+manifest and scene loader together, then be reviewed before merging.
 
-Language is EN on a fresh visit; only the choice `en`/`ru` is saved under
-`pliply-language`. Storage failures use the current in-memory choice.
-Form drafts stay in the open page's memory, not localStorage or analytics;
-closing the dialog retains them, reloading the page loses them.
+Only the EN/RU choice is saved in localStorage. Form drafts stay in page memory;
+closing the dialog retains them and reloading loses them. User text is never
+inserted as HTML. Offline/WebGL/library failure leaves the core interface working.
 
-## Before publication
-
-Read [stage 1 decisions](docs/stage-1/owner-decisions.md),
-[URL map](docs/stage-1/url-map.md),
-[HTTPS runbook](docs/stage-1/https.md) and
-[form setup](docs/stage-1/form-setup.md).
-Review `docs/stage-1/verification.md` and repeat the listed checks after changes.
-No DNS/MX/SPF/DMARC changes are part of this branch.
-
-Only after separate publication authorization: merge the reviewed PR, wait for
-the Pages build, verify HTTPS and all retained paths. Enable Enforce HTTPS in
-Pages settings as documented; this is not controlled by an HTML file.
-Keep `CNAME`. If necessary, revert the merge commit with a new commit on `main`
-and let Pages rebuild; do not rewrite history. Pages settings must be rolled
-back separately if changed. Confirm any form receipt in the destination inbox
-after an explicitly authorized test; an HTTP acknowledgement is insufficient.
+See [security scope](SECURITY.md), [HTTPS runbook](docs/stage-1/https.md), and
+[form setup](docs/stage-1/form-setup.md). Enforce HTTPS is a host setting, not an
+HTML redirect. Form delivery needs a real verified provider endpoint and inbox
+receipt test. Domain and corporate email configuration are unchanged.

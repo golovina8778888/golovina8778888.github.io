@@ -1,0 +1,49 @@
+name: Site security and Pages checks
+
+on:
+  push:
+    branches: [main, codex/pliply-stage-one]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout without persisted credentials
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Source integrity and static references
+        run: |
+          python3 _tools/harden.py --check
+          python3 _tools/check-static.py
+          node --check main.js
+          node --check scene.js
+          node --check contact-transport.js
+          node --test _tests/*.test.cjs
+      - name: Known vulnerabilities in the vendored runtime versions
+        run: npm audit --omit=dev --prefix _tools/dependencies
+      - name: Scan history and working tree for exposed credentials
+        run: |
+          python3 _tools/install-gitleaks.py "$RUNNER_TEMP/gitleaks"
+          "$RUNNER_TEMP/gitleaks" git --log-opts=--all --redact --no-banner .
+          "$RUNNER_TEMP/gitleaks" dir --redact --no-banner .
+      - name: Build with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Verify actual publication exclusions
+        run: python3 _tools/check-published.py _site

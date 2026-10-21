@@ -1,8 +1,30 @@
-# GitHub Pages still publishes main:/ with its existing legacy Jekyll build.
-# Review evidence, local fixtures and maintenance instructions are not site pages.
+# GitHub Pages main:/ legacy Jekyll build. Exclude evidence and project data.
 exclude:
   - docs
   - _tools
   - _tests
   - README.md
   - README.txt
+  - SECURITY.md
+  - app.js
+  - assets
+  - vendor/manifest.json
+  - analytics_28days.jpg
+  - analytics_overview.jpg
+  - cinema_zone_hd.jpg
+  - cinemaravilha_overview.png
+  - hero.png
+  - kpi_banner.png
+  - lifetime_metrics.jpg
+  - metrics_28days.jpg
+  - nuevas_peliculas.jpg
+  - overview_23_4M_6_8M_70_5k_34k.png
+  - poster1.png
+  - poster2.png
+  - revenue_28days.jpg
+  - revenue_lifetime.jpg
+  - stats_english.png
+  - stats_portuguese.png
+  - stats_spanish.png
+  - stats_ukrainian.png
+  - views_content.jpg

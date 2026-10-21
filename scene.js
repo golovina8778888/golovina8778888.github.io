@@ -44,7 +44,10 @@
     }
     function createScene() {
         const { THREE, gsap, ScrollTrigger } = window;
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        const attributes = { alpha: true, antialias: true };
+        const context = canvas.getContext('webgl2', attributes) || canvas.getContext('webgl', attributes);
+        if (!context) throw new Error('WebGL unavailable');
+        const renderer = new THREE.WebGLRenderer({ canvas, context, ...attributes });
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, .1, 1000);
         camera.position.z = 100;
@@ -126,8 +129,8 @@
         if (!document.hidden) animate();
         return dispose;
     }
-    // Pinned versions + SRI; loaded only after the core DOM is interactive.
-    const RESOURCES = [{"url": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js", "integrity": "sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu"}, {"url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js", "integrity": "sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS"}, {"url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js", "integrity": "sha384-poC0r6usQOX2Ayt/VGA+t81H6V3iN9L+Irz9iO8o+s0X20tLpzc9DOOtnKxhaQSE"}];
+    // Local pinned copies + SRI; no external script executes in a visitor's browser.
+    const RESOURCES = [{"url": "/vendor/three-0.128.0.min.js", "integrity": "sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu"}, {"url": "/vendor/gsap-3.12.2.min.js", "integrity": "sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS"}, {"url": "/vendor/ScrollTrigger-3.12.2.min.js", "integrity": "sha384-poC0r6usQOX2Ayt/VGA+t81H6V3iN9L+Irz9iO8o+s0X20tLpzc9DOOtnKxhaQSE"}];
     motion.addEventListener('change', start);
     if (document.readyState === 'complete') start();
     else window.addEventListener('load', start, { once: true });

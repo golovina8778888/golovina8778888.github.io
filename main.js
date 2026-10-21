@@ -153,7 +153,8 @@ function updateSubmit() {
     message.readOnly = busy;
 }
 function validateField(field) {
-    const valid = Boolean(field.value.trim()) && field.validity.valid;
+    const valid = Boolean(field.value.trim()) && field.validity.valid &&
+        field.value.length <= (field === email ? 254 : 4000);
     const error = document.getElementById(field === email ? 'email-error' : 'message-error');
     error.hidden = valid;
     error.textContent = valid ? '' : t(field === email ? 'emailRequired' : 'messageRequired');
@@ -218,12 +219,17 @@ form.addEventListener('submit', async event => {
     setStatus('sending');
     // Snapshot before awaiting; never send edits entered during a request.
     const sentEmail = email.value.trim(), sentMessage = message.value;
-    const result = await transport.submit(endpoint, { email: sentEmail, message: sentMessage, _subject: 'PLIPLY project inquiry', language: currentLang, _gotcha: '' });
-    busy = false;
-    accepted = result.state === 'accepted' && email.value.trim() === sentEmail && message.value === sentMessage;
-    form.removeAttribute('aria-busy');
-    setStatus(result.state);
-    updateSubmit();
+    try {
+        const result = await transport.submit(endpoint, { email: sentEmail, message: sentMessage, language: currentLang, _gotcha: '' });
+        accepted = result.state === 'accepted' && email.value.trim() === sentEmail && message.value === sentMessage;
+        setStatus(result.state);
+    } catch (_) {
+        setStatus('unknown');
+    } finally {
+        busy = false;
+        form.removeAttribute('aria-busy');
+        updateSubmit();
+    }
 });
 document.getElementById('copy-message').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(draft()); setStatus('copied'); }
