@@ -1,0 +1,22 @@
+name: One-time contact transport probe
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  probe:
+    if: github.head_ref == 'codex/pliply-form-probe'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: POST activation test and print provider response
+        shell: bash
+        run: |
+          curl --max-time 20 --silent --show-error \
+            --output response.json --write-out 'HTTP %{http_code}\n' \
+            --request POST 'https://formsubmit.co/ajax/adm@pliply.pro' \
+            --header 'Content-Type: application/json' \
+            --header 'Accept: application/json' \
+            --data '{"name":"PLIPLY website test","email":"adm@pliply.pro","message":"One-time activation test for the direct website contact form. Please disregard.","_subject":"PLIPLY contact form activation test","_captcha":"false"}'
+          cat response.json
